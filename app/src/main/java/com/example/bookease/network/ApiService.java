@@ -7,14 +7,13 @@ import retrofit2.http.*;
 
 public interface ApiService {
 
-    // ── Auth ────────────────────────────────────────────────────────────────
     @POST("api/register")
     Call<MessageResponse> register(@Body RegisterRequest body);
 
     @POST("api/login")
     Call<LoginResponse> login(@Body LoginRequest body);
 
-    // ── Profile ─────────────────────────────────────────────────────────────
+
     @GET("api/profile")
     Call<User> getProfile();
 

@@ -6,14 +6,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
 public class ApiClient {
-    // For Android Emulator use 10.0.2.2, for real device use your PC's local IP
     private static final String BASE_URL = "http://192.168.1.4:5000/";
     private static Retrofit retrofit = null;
     private static String authToken = "";
 
     public static void setToken(String token) {
         authToken = token;
-        retrofit = null; // reset so next call rebuilds with new token
+        retrofit = null;
     }
 
     public static Retrofit getClient() {
